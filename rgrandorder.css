@@ -1,0 +1,743 @@
+/**
+ * R/GRANDORDER CUSTOM CSS FOR REDDIT NEW LOOK
+ * ===========================================
+ *
+ * This CSS bring back features found in the old custom CSS to the new look.
+ * To work, she need to be loaded for all www.reddit.com/r/grandorder urls in your browser using an extension such as Stylus.
+ * For more information and updates, please consult the project page: https://github.com/elnareen/rgrandorder-css/
+ **/
+ 
+/**
+ * 1 - Remove superfluous empty line at the beginning of flairs.
+ **/
+
+div[style*="background-color:#EDEFF1;color:#1A1A1B"],
+div[style*="background-color: rgb(237, 239, 241); color: rgb(26, 26, 27);"]{
+    white-space: unset;
+    overflow: unset;
+}
+
+/**
+ * 2 - Add pictures for sidebar headers.
+ **/
+
+/** Rules (lateral block) **/
+div[style*="margin-left"] > div > div:nth-last-of-type(5) h2 {
+	content: url("//a.thumbs.redditmedia.com/kk-70TRky1Klr5Kcj6wqdA8AYVRt2_c-mBk4kJk_OL0.png");
+	margin: auto;
+	background: no-repeat;
+	display: block;
+}
+
+/** Links (lateral block) **/
+div[style*="margin-left"] > div > div:nth-last-of-type(4) h2 {
+	content: url("//a.thumbs.redditmedia.com/G6TGQeZSx8xF5jxYtoMWaDyEqKe0-PJVcbJDRuy9QX0.png");
+	margin: auto;
+	background: no-repeat;
+	display: block;
+}
+
+/** Weekly threads (lateral block) **/
+div[style*="margin-left"] > div > div:nth-last-of-type(3) h2 {
+	content: url("https://a.thumbs.redditmedia.com/PWBzWY0k3PM2ZBRn6vmmdrMSwd042zQgbnW3Jt3tQI8.png");
+	margin: auto;
+	background: no-repeat;
+	display: block;
+}
+
+/** 
+ * Add Voyager animated spire for unread messages notifications.
+ **/
+
+a[href="/message/unread"]:before {
+    position: fixed;
+    padding: 0px 0px 0px 0px;
+    bottom: 24px;
+    z-index: 998 !important;
+    background-color: transparent;
+    border-radius: 2px;
+    color: #fff;
+    width: 200px;
+    height: 250px;
+    left: 24px;
+    content: " ";
+    text-indent: 0px;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    line-height: 1;
+    /*-webkit-transform:translateY(400px);
+    transform:translateY(400px);*/
+    background: url("https://i.imgur.com/IWfTK9D.png") repeat 0 0;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+a[href="/message/unread"]:hover:before {
+background-color: transparent;
+}
+
+a[href="/message/unread"]:active:before {
+background-color: transparent;
+}
+
+a[href="/message/unread"]:before {
+animation-name: toast;
+animation-duration: 5s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+
+-webkit-animation-name: toast;
+-webkit-animation-duration: 5s;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-timing-function: ease;
+}
+
+a[href="/message/unread"]:hover:before {
+-webkit-animation-play-state: paused;
+-moz-animation-play-state: paused;
+-o-animation-play-state: paused;
+animation-play-state: paused;
+}
+
+@-webkit-keyframes toast {
+0%      {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+20%     {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+25% {transform:translateY(-8px);    -webkit-transform:translateY(-8px); opacity: 1;}
+27% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+92% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+97% {transform:translateY(16px);    -webkit-transform:translateY(16px); opacity: 1;}
+100%    {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+}
+
+@-o-keyframes toast {
+0%      {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+20%     {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+25% {transform:translateY(-8px);    -webkit-transform:translateY(-8px); opacity: 1;}
+27% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+92% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+97% {transform:translateY(16px);    -webkit-transform:translateY(16px); opacity: 1;}
+100%    {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+}
+
+
+@-moz-keyframes toast {
+0%      {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+20%     {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+25% {transform:translateY(-8px);    -webkit-transform:translateY(-8px); opacity: 1;}
+27% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+92% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+97% {transform:translateY(16px);    -webkit-transform:translateY(16px); opacity: 1;}
+100%    {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+            }
+
+
+@keyframes toast {
+0%      {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+20%     {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+25% {transform:translateY(-8px);    -webkit-transform:translateY(-8px); opacity: 1;}
+27% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+92% {transform:translateY(00px);    -webkit-transform:translateY(00px); opacity: 1;}
+97% {transform:translateY(16px);    -webkit-transform:translateY(16px); opacity: 1;}
+100%    {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
+}
+
+/**
+ * Add comment faces support back.
+ **/
+
+div[data-test-id="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
+div[data-test-id="post-content"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href^="/user/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
+a[href^="#"] {
+ display:inline-block;
+ position:relative;
+ padding-top:2px;
+ text-align:center;
+ font-family:arial,sans-serif;
+ font-size:18px;
+ color:#fff!important;
+ text-shadow:1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px 1px 1px #000,1px -1px 1px #000,-1px 1px 1px #000,-1px -1px 1px #000;
+ cursor:default
+}
+div[data-test-id="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"])>strong,
+div[data-test-id="comment"] a[href^="#"]>strong,
+div[data-test-id="post-content"] a[href^="#"]>strong{
+ display:block;
+ width:100%;
+ position:absolute;
+ bottom:4px;
+ font-weight:400
+}
+div[data-test-id="comment"] a[href^="#"],
+div[data-test-id="post-content"] a[href^="#"],
+.RichTextJSON-root a[href^="#"]{
+ display:inline-block;
+ width:150px;
+ height:150px
+}
+a[href="#DrakeTch"],
+a[href="#EmiyaSmile"],
+a[href="#HydeAngry"],
+a[href="#KEHAHA"],
+a[href="#KamaEvil"],
+a[href="#Medjed"],
+a[href="#ParaSigh"],
+a[href="#QuetzLucha"],
+a[href="#RyoumaGuda"],
+a[href="#SherlockRaise"],
+a[href="#TeachShock"],
+a[href="#WaverUhm"] {
+ background:url("//b.thumbs.redditmedia.com/Nhhd8ylr-dOb8VWMKSThCk4Yql-7uYyzGU8k68ToUkA.png")no-repeat
+}
+a[href="#DrakeTch"] {
+ background-position:-1px -1px
+}
+a[href="#EmiyaSmile"] {
+ background-position:-153px -1px
+}
+a[href="#HydeAngry"] {
+ background-position:-305px -1px
+}
+a[href="#KEHAHA"] {
+ background-position:-1px -153px
+}
+a[href="#KamaEvil"] {
+ background-position:-153px -153px
+}
+a[href="#Medjed"] {
+ background-position:-305px -153px
+}
+a[href="#ParaSigh"] {
+ background-position:-1px -305px
+}
+a[href="#QuetzLucha"] {
+ background-position:-153px -305px
+}
+a[href="#RyoumaGuda"] {
+ background-position:-305px -305px
+}
+a[href="#SherlockRaise"] {
+ background-position:-457px -1px
+}
+a[href="#TeachShock"] {
+ background-position:-457px -153px
+}
+a[href="#WaverUhm"] {
+ background-position:-457px -305px
+}
+a[href="#CasGilLaugh"],
+a[href="#CasGilSmug"],
+a[href="#CuGrin"],
+a[href="#IllyaLewd"],
+a[href="#JeanneHappy"],
+a[href="#LartoriaHmm"],
+a[href="#MashuSenpai"],
+a[href="#OryouSleep"],
+a[href="#RegendSigh"],
+a[href="#ReinesEvil"],
+a[href="#SuzukaWhat"],
+a[href="#TeachWhistle"] {
+ background:url("//b.thumbs.redditmedia.com/nFHAnz0G35NxUzqeq7iH7o70uRPYq3aA6SGVTFJL9fo.png")no-repeat
+}
+a[href="#CasGilLaugh"] {
+ background-position:-1px -1px
+}
+a[href="#CasGilSmug"] {
+ background-position:-153px -1px
+}
+a[href="#CuGrin"] {
+ background-position:-305px -1px
+}
+a[href="#IllyaLewd"] {
+ background-position:-1px -153px
+}
+a[href="#JeanneHappy"] {
+ background-position:-153px -153px
+}
+a[href="#LartoriaHmm"] {
+ background-position:-305px -153px
+}
+a[href="#MashuSenpai"] {
+ background-position:-1px -305px
+}
+a[href="#OryouSleep"] {
+ background-position:-153px -305px
+}
+a[href="#RegendSigh"] {
+ background-position:-305px -305px
+}
+a[href="#ReinesEvil"] {
+ background-position:-457px -1px
+}
+a[href="#SuzukaWhat"] {
+ background-position:-457px -153px
+}
+a[href="#TeachWhistle"] {
+ background-position:-457px -305px
+}
+a[href="#GilSmug"],
+a[href="#GilWait"],
+a[href="#MarthaOh"],
+a[href="#OrionAngry"],
+a[href="#OrionCry"],
+a[href="#QSHWink"],
+a[href="#RobinSigh"],
+a[href="#RomaRespect"],
+a[href="#SHINSENGUMI"],
+a[href="#SalterWhat"],
+a[href="#SthenoScare"],
+a[href="#TeslaSrsly"] {
+ background:url("//b.thumbs.redditmedia.com/IncSIhmLlwLH1VA4kJY8gJs0bWZ9VTgjQiuMNXVlHqs.png")no-repeat
+}
+a[href="#GilSmug"] {
+ background-position:-1px -1px
+}
+a[href="#GilWait"] {
+ background-position:-153px -1px
+}
+a[href="#MarthaOh"] {
+ background-position:-305px -1px
+}
+a[href="#OrionAngry"] {
+ background-position:-1px -153px
+}
+a[href="#OrionCry"] {
+ background-position:-153px -153px
+}
+a[href="#QSHWink"] {
+ background-position:-305px -153px
+}
+a[href="#RobinSigh"] {
+ background-position:-1px -305px
+}
+a[href="#RomaRespect"] {
+ background-position:-153px -305px
+}
+a[href="#SHINSENGUMI"] {
+ background-position:-305px -305px
+}
+a[href="#SalterWhat"] {
+ background-position:-457px -1px
+}
+a[href="#SthenoScare"] {
+ background-position:-457px -153px
+}
+a[href="#TeslaSrsly"] {
+ background-position:-457px -305px
+}
+a[href="#ArjunaKamiDa"],
+a[href="#ArthurCulture"],
+a[href="#AsteriosGrin"],
+a[href="#BoudicaBlush"],
+a[href="#BrynStress"],
+a[href="#GAO"],
+a[href="#HansSmug"],
+a[href="#MedusaAngry"],
+a[href="#MeganeKiran"],
+a[href="#MuramasaCharm"],
+a[href="#OkitaGuda"],
+a[href="#TamamoAngry"] {
+ background:url("//b.thumbs.redditmedia.com/LHTgE7NpFn5RUorXmP3NEfSRBA9nqyUV851ZNIpWxto.png")no-repeat
+}
+a[href="#ArjunaKamiDa"] {
+ background-position:-1px -1px
+}
+a[href="#ArthurCulture"] {
+ background-position:-153px -1px
+}
+a[href="#AsteriosGrin"] {
+ background-position:-305px -1px
+}
+a[href="#BoudicaBlush"] {
+ background-position:-1px -153px
+}
+a[href="#BrynStress"] {
+ background-position:-153px -153px
+}
+a[href="#GAO"] {
+ background-position:-305px -153px
+}
+a[href="#HansSmug"] {
+ background-position:-1px -305px
+}
+a[href="#MedusaAngry"] {
+ background-position:-153px -305px
+}
+a[href="#MeganeKiran"] {
+ background-position:-305px -305px
+}
+a[href="#MuramasaCharm"] {
+ background-position:-457px -1px
+}
+a[href="#OkitaGuda"] {
+ background-position:-457px -153px
+}
+a[href="#TamamoAngry"] {
+ background-position:-457px -305px
+}
+a[href="#EuryaleShock"],
+a[href="#HokusaiAra"],
+a[href="#MarieGasp"],
+a[href="#MeltSadist"],
+a[href="#MoriartyEvil"],
+a[href="#NeroUmu"],
+a[href="#ShebaStressed"],
+a[href="#Snek"],
+a[href="#TristanSweat"] {
+ background:url("//b.thumbs.redditmedia.com/Gp7bZTRwQMfRATVWKm_dHJTsINUh8yK3GYOR4GVJlVU.png")no-repeat
+}
+a[href="#EuryaleShock"] {
+ background-position:-1px -1px
+}
+a[href="#HokusaiAra"] {
+ background-position:-153px -1px
+}
+a[href="#MarieGasp"] {
+ background-position:-305px -1px
+}
+a[href="#MeltSadist"] {
+ background-position:-1px -153px
+}
+a[href="#MoriartyEvil"] {
+ background-position:-153px -153px
+}
+a[href="#NeroUmu"] {
+ background-position:-305px -153px
+}
+a[href="#ShebaStressed"] {
+ background-position:-1px -305px
+}
+a[href="#Snek"] {
+ background-position:-153px -305px
+}
+a[href="#TristanSweat"] {
+ background-position:-305px -305px
+}
+a[href="#BediReally"],
+a[href="#CirceReally"],
+a[href="#EnkiduGlare"],
+a[href="#KintokiConfused"],
+a[href="#KiyoHappy"],
+a[href="#LancelotShock"],
+a[href="#LilyHappy"],
+a[href="#NightingaleSigh"],
+a[href="#OkitaCough"],
+a[href="#SaberBlush"],
+a[href="#SalieriDisgust"],
+a[href="#ShikiMysticEyes"] {
+ background:url("//b.thumbs.redditmedia.com/IkmVGPuGD5LesbeiOzDJRMhOSCxgxsD9ktLBv94ANjA.png")no-repeat
+}
+a[href="#BediReally"] {
+ background-position:-1px -1px
+}
+a[href="#CirceReally"] {
+ background-position:-153px -1px
+}
+a[href="#EnkiduGlare"] {
+ background-position:-305px -1px
+}
+a[href="#KintokiConfused"] {
+ background-position:-1px -153px
+}
+a[href="#KiyoHappy"] {
+ background-position:-153px -153px
+}
+a[href="#LancelotShock"] {
+ background-position:-305px -153px
+}
+a[href="#LilyHappy"] {
+ background-position:-1px -305px
+}
+a[href="#NightingaleSigh"] {
+ background-position:-153px -305px
+}
+a[href="#OkitaCough"] {
+ background-position:-305px -305px
+}
+a[href="#SaberBlush"] {
+ background-position:-457px -1px
+}
+a[href="#SalieriDisgust"] {
+ background-position:-457px -153px
+}
+a[href="#ShikiMysticEyes"] {
+ background-position:-457px -305px
+}
+a[href="#AstolfoSweat"],
+a[href="#Dokoda"],
+a[href="#EreshHappy"],
+a[href="#EreshTsun"],
+a[href="#IshtarBully"],
+a[href="#JasonShock"],
+a[href="#LakshmiWhat"],
+a[href="#LalterShout"],
+a[href="#SantaLilyCry"],
+a[href="#SantaLilyLogical"] {
+ background:url("//a.thumbs.redditmedia.com/TVQfRFjtbk2oxN8NU-Z2Tno0N8QLCTF1ZtxokjFQLm8.png")no-repeat
+}
+a[href="#AstolfoSweat"] {
+ background-position:-1px -1px
+}
+a[href="#Dokoda"] {
+ background-position:-153px -1px
+}
+a[href="#EreshHappy"] {
+ background-position:-305px -1px
+}
+a[href="#EreshTsun"] {
+ background-position:-1px -153px
+}
+a[href="#IshtarBully"] {
+ background-position:-153px -153px
+}
+a[href="#JasonShock"] {
+ background-position:-305px -153px
+}
+a[href="#LakshmiWhat"] {
+ background-position:-1px -305px
+}
+a[href="#LalterShout"] {
+ background-position:-153px -305px
+}
+a[href="#SantaLilyCry"] {
+ background-position:-305px -305px
+}
+a[href="#SantaLilyLogical"] {
+ background-position:-457px -1px
+}
+a[href="#GrayBlush"],
+a[href="#JalterSmirk"],
+a[href="#KarnaEye"],
+a[href="#LizMad"],
+a[href="#MataOops"],
+a[href="#MerlinSmug"],
+a[href="#MordredLol"],
+a[href="#MusashiEhe"],
+a[href="#NyalterWink"],
+a[href="#YangGetUsedToIt"] {
+ background:url("//a.thumbs.redditmedia.com/r6a5xZe-Fy8hbRtZDOf6Ih_kfJjR08wh6TqzRDNyN24.png")no-repeat
+}
+a[href="#GrayBlush"] {
+ background-position:-1px -1px
+}
+a[href="#JalterSmirk"] {
+ background-position:-153px -1px
+}
+a[href="#KarnaEye"] {
+ background-position:-305px -1px
+}
+a[href="#LizMad"] {
+ background-position:-1px -153px
+}
+a[href="#MataOops"] {
+ background-position:-153px -153px
+}
+a[href="#MerlinSmug"] {
+ background-position:-305px -153px
+}
+a[href="#MordredLol"] {
+ background-position:-1px -305px
+}
+a[href="#MusashiEhe"] {
+ background-position:-153px -305px
+}
+a[href="#NyalterWink"] {
+ background-position:-305px -305px
+}
+a[href="#YangGetUsedToIt"] {
+ background-position:-457px -1px
+}
+a[href="#BBChannel"],
+a[href="#JalterDisgust"],
+a[href="#KagetoraCrazy"],
+a[href="#KiyoTrouble"],
+a[href="#NobuGuda"],
+a[href="#SalterReally"],
+a[href="#ShishouSigh"],
+a[href="#SitonaiSmug"],
+a[href="#TamaCatBlush"],
+a[href="#UshiHmph"],
+a[href="#VinciOops"] {
+ background:url("//b.thumbs.redditmedia.com/ODzj8DCA9nu-_S2usX42a9aVVDfgELakJZQjPqqC2MM.png")no-repeat
+}
+a[href="#BBChannel"] {
+ background-position:-1px -1px
+}
+a[href="#JalterDisgust"] {
+ background-position:-153px -1px
+}
+a[href="#KagetoraCrazy"] {
+ background-position:-305px -1px
+}
+a[href="#KiyoTrouble"] {
+ background-position:-1px -153px
+}
+a[href="#NobuGuda"] {
+ background-position:-153px -153px
+}
+a[href="#SalterReally"] {
+ background-position:-305px -153px
+}
+a[href="#ShishouSigh"] {
+ background-position:-1px -305px
+}
+a[href="#SitonaiSmug"] {
+ background-position:-153px -305px
+}
+a[href="#TamaCatBlush"] {
+ background-position:-305px -305px
+}
+a[href="#UshiHmph"] {
+ background-position:-457px -1px
+}
+a[href="#VinciOops"] {
+ background-position:-457px -153px
+}
+a[href="#AshAngry"],
+a[href="#HektorHehe"],
+a[href="#JeanneBlush"],
+a[href="#JustGawain"],
+a[href="#MarthaOops"],
+a[href="#NeroBlush"],
+a[href="#Oppression"],
+a[href="#PenthBerserk"],
+a[href="#ShikiSigh"],
+a[href="#TaigaStupid"],
+a[href="#VinciGenius"] {
+ background:url("//b.thumbs.redditmedia.com/CcaGfiaGceABoJpoVoC0lYJnKldOHSMEnVkyfi8LRtw.png")no-repeat
+}
+a[href="#AshAngry"] {
+ background-position:-1px -1px
+}
+a[href="#HektorHehe"] {
+ background-position:-153px -1px
+}
+a[href="#JeanneBlush"] {
+ background-position:-305px -1px
+}
+a[href="#JustGawain"] {
+ background-position:-1px -153px
+}
+a[href="#MarthaOops"] {
+ background-position:-153px -153px
+}
+a[href="#NeroBlush"] {
+ background-position:-305px -153px
+}
+a[href="#Oppression"] {
+ background-position:-1px -305px
+}
+a[href="#PenthBerserk"] {
+ background-position:-153px -305px
+}
+a[href="#ShikiSigh"] {
+ background-position:-305px -305px
+}
+a[href="#TaigaStupid"] {
+ background-position:-457px -1px
+}
+a[href="#VinciGenius"] {
+ background-position:-457px -153px
+}
+a[href="#BBScary"],
+a[href="#BeoProud"],
+a[href="#COOL"],
+a[href="#IshtarWink"],
+a[href="#JalterWhat"],
+a[href="#LipPout"],
+a[href="#MHXXOuch"],
+a[href="#MiyuWhat"],
+a[href="#NeetBlush"],
+a[href="#SemiScheme"],
+a[href="#TamaCatSad"] {
+ background:url("//b.thumbs.redditmedia.com/MwVLzKrF9cro96fMmB-fu32orDTbDlYnuxdxuAHkWfg.png")no-repeat
+}
+a[href="#BBScary"] {
+ background-position:-1px -1px
+}
+a[href="#BeoProud"] {
+ background-position:-153px -1px
+}
+a[href="#COOL"] {
+ background-position:-305px -1px
+}
+a[href="#IshtarWink"] {
+ background-position:-1px -153px
+}
+a[href="#JalterWhat"] {
+ background-position:-153px -153px
+}
+a[href="#LipPout"] {
+ background-position:-305px -153px
+}
+a[href="#MHXXOuch"] {
+ background-position:-1px -305px
+}
+a[href="#MiyuWhat"] {
+ background-position:-153px -305px
+}
+a[href="#NeetBlush"] {
+ background-position:-305px -305px
+}
+a[href="#SemiScheme"] {
+ background-position:-457px -1px
+}
+a[href="#TamaCatSad"] {
+ background-position:-457px -153px
+}
+a[href="#KungFou"] {
+ background:url("//a.thumbs.redditmedia.com/hTI0J9n8nCUHEbAVUtEMHCAvs0diUAiWeDPKFj74Jv0.png")no-repeat
+}
+a[href="#KungFou"] {
+ background-position:-1px -1px
+}
+a[href="#GachaDespair"],
+a[href="#OGHelena"],
+a[href="#Gendo"],
+a[href="#SadLion"],
+a[href="#BadSide"],
+a[href="#Gramps"],
+a[href="#KillMe"],
+a[href="#SmugLaugh"],
+a[href="#Thonk"],
+a[href="#TimeToDie"],
+a[href="#ViveLaFrance"],
+a[href="#WhaleTime"] {
+ background:url("//b.thumbs.redditmedia.com/8in_Y6yHshwFklLGRQb5bieEkYa3p7CHRzPvRlyX4og.png")no-repeat
+}
+a[href="#GachaDespair"] {
+ background-position:-1px -1px
+}
+a[href="#OGHelena"] {
+ background-position:-153px -1px
+}
+a[href="#Gendo"] {
+ background-position:-305px -1px
+}
+a[href="#SadLion"] {
+ background-position:-1px -153px
+}
+a[href="#BadSide"] {
+ background-position:-153px -153px
+}
+a[href="#Gramps"] {
+ background-position:-305px -153px
+}
+a[href="#KillMe"] {
+ background-position:-1px -305px
+}
+a[href="#SmugLaugh"] {
+ background-position:-153px -305px
+}
+a[href="#Thonk"] {
+ background-position:-305px -305px
+}
+a[href="#TimeToDie"] {
+ background-position:-457px -1px
+}
+a[href="#ViveLaFrance"] {
+ background-position:-457px -153px
+}
+a[href="#WhaleTime"] {
+ background-position:-457px -305px
+}
