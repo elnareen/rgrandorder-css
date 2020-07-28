@@ -8,41 +8,13 @@
  **/
  
 /**
- * 1 - Remove superfluous empty line at the beginning of flairs.
+ * Remove superfluous empty line at the beginning of flairs.
  **/
 
 div[style*="background-color:#EDEFF1;color:#1A1A1B"],
 div[style*="background-color: rgb(237, 239, 241); color: rgb(26, 26, 27);"]{
     white-space: unset;
     overflow: unset;
-}
-
-/**
- * 2 - Add pictures for sidebar headers.
- **/
-
-/** Rules (lateral block) **/
-div[style*="margin-left"] > div > div:nth-last-of-type(5) h2 {
-	content: url("//a.thumbs.redditmedia.com/kk-70TRky1Klr5Kcj6wqdA8AYVRt2_c-mBk4kJk_OL0.png");
-	margin: auto;
-	background: no-repeat;
-	display: block;
-}
-
-/** Links (lateral block) **/
-div[style*="margin-left"] > div > div:nth-last-of-type(4) h2 {
-	content: url("//a.thumbs.redditmedia.com/G6TGQeZSx8xF5jxYtoMWaDyEqKe0-PJVcbJDRuy9QX0.png");
-	margin: auto;
-	background: no-repeat;
-	display: block;
-}
-
-/** Weekly threads (lateral block) **/
-div[style*="margin-left"] > div > div:nth-last-of-type(3) h2 {
-	content: url("https://a.thumbs.redditmedia.com/PWBzWY0k3PM2ZBRn6vmmdrMSwd042zQgbnW3Jt3tQI8.png");
-	margin: auto;
-	background: no-repeat;
-	display: block;
 }
 
 /** 
