@@ -118,8 +118,8 @@ animation-play-state: paused;
  * Add comment faces support back.
  **/
 
-div[data-test-id="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
-div[data-test-id="post-content"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href^="/user/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
+div[data-testid="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
+div[data-testid="post-content"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href^="/user/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"]):not(.noKeyNav),
 a[href^="#"] {
  display:inline-block;
  position:relative;
@@ -131,17 +131,17 @@ a[href^="#"] {
  text-shadow:1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px 1px 1px #000,1px -1px 1px #000,-1px 1px 1px #000,-1px -1px 1px #000;
  cursor:default
 }
-div[data-test-id="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"])>strong,
-div[data-test-id="comment"] a[href^="#"]>strong,
-div[data-test-id="post-content"] a[href^="#"]>strong{
+div[data-testid="comment"] a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href="/v"]):not([href^="/message"])>strong,
+div[data-testid="comment"] a[href^="#"]>strong,
+div[data-testid="post-content"] a[href^="#"]>strong{
  display:block;
  width:100%;
  position:absolute;
  bottom:4px;
  font-weight:400
 }
-div[data-test-id="comment"] a[href^="#"],
-div[data-test-id="post-content"] a[href^="#"],
+div[data-testid="comment"] a[href^="#"],
+div[data-testid="post-content"] a[href^="#"],
 .RichTextJSON-root a[href^="#"]{
  display:inline-block;
  width:150px;
