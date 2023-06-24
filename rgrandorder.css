@@ -13,8 +13,7 @@
 
 div[style*="background-color:#EDEFF1;color:#1A1A1B"],
 div[style*="background-color: rgb(237, 239, 241); color: rgb(26, 26, 27);"]{
-    white-space: unset;
-    overflow: unset;
+    white-space: normal;
 }
 
 /** 
