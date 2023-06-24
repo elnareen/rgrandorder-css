@@ -21,11 +21,11 @@ div[style*="background-color: rgb(237, 239, 241); color: rgb(26, 26, 27);"]{
  * Add Voyager animated spire for unread messages notifications.
  **/
 
-a[href="/message/unread"]:before {
+#change-username-tooltip-id button div span:before {
     position: fixed;
-    padding: 0px 0px 0px 0px;
+    padding: 0 0 0 0;
     bottom: 24px;
-    z-index: 998 !important;
+    z-index: 998;
     background-color: transparent;
     border-radius: 2px;
     color: #fff;
@@ -45,15 +45,17 @@ a[href="/message/unread"]:before {
     background-repeat: no-repeat;
 }
 
-a[href="/message/unread"]:hover:before {
+/*a[href="/message/unread"]:hover:before,
+#change-username-tooltip-id button div span:before {
 background-color: transparent;
 }
 
-a[href="/message/unread"]:active:before {
+a[href="/message/unread"]:active:before,
+#change-username-tooltip-id button div span:before {
 background-color: transparent;
-}
+}*/
 
-a[href="/message/unread"]:before {
+#change-username-tooltip-id button div span:before {
 animation-name: toast;
 animation-duration: 5s;
 animation-iteration-count: 1;
@@ -65,12 +67,12 @@ animation-timing-function: ease;
 -webkit-animation-timing-function: ease;
 }
 
-a[href="/message/unread"]:hover:before {
+/*a[href="/message/unread"]:hover:before {
 -webkit-animation-play-state: paused;
 -moz-animation-play-state: paused;
 -o-animation-play-state: paused;
 animation-play-state: paused;
-}
+}*/
 
 @-webkit-keyframes toast {
 0%      {transform:translateY(76px);    -webkit-transform:translateY(76px); opacity: 0;}
